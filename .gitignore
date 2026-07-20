@@ -1,0 +1,17 @@
+# Eclipse metadata and build outputs
+.metadata/
+RemoteSystemsTempFiles/
+*.log
+*.class
+bin/
+
+# IntelliJ metadata and build outputs
+.idea/
+*.iml
+out/
+gen/
+
+# Build tools build folders
+target/
+.gradle/
+build/
