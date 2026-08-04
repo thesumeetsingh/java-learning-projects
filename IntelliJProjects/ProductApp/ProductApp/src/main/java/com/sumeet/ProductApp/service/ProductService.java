@@ -1,7 +1,8 @@
-package com.sumeet.simpleWebApp.Service;
+package com.sumeet.ProductApp.service;
 
-import com.sumeet.simpleWebApp.Model.Product;
-import com.sumeet.simpleWebApp.repository.ProductRepo;
+
+import com.sumeet.ProductApp.model.Product;
+import com.sumeet.ProductApp.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
