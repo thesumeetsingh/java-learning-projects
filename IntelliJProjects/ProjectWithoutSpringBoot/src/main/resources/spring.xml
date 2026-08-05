@@ -6,7 +6,8 @@
 
     <!-- bean definitions here -->
 
-    <bean id="dev1" class="com.sumeet.Dev">
+    <bean id="dev" class="com.sumeet.Dev">
+        <property name="age" value="21" />
     </bean>
     <bean id="dev2" class="com.sumeet.Dev">
     </bean>
