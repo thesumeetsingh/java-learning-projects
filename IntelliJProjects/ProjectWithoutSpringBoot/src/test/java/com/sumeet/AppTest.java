@@ -1,4 +1,4 @@
-package org.SUMEET;
+package com.sumeet;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
