@@ -6,15 +6,34 @@
 
     <!-- bean definitions here -->
 
-    <bean id="dev" class="com.sumeet.Dev">
-        <property name="age" value="21" />
-    </bean>
+<!--    <bean id="dev" class="com.sumeet.Dev">-->
+<!--        <property name="age" value="21" />-->
+<!--    </bean>-->
 
-    <bean id="dev2" class="com.sumeet.Dev">
-        <constructor-arg value="23"/>
-    </bean>
+<!--    <bean id="dev2" class="com.sumeet.Dev">-->
+<!--        <constructor-arg value="23"/>-->
+<!--    </bean>-->
 
     <bean id="laptop" class="com.sumeet.Laptop">
+    </bean>
+
+    <bean id="dev" class="com.sumeet.Dev">
+        <constructor-arg ref="lap1"/>
+    </bean>
+
+    <bean id="devLap" class="com.sumeet.Dev">
+        <constructor-arg ref="lap1"/>
+    </bean>
+    <bean id="devDesk" class="com.sumeet.Dev">
+        <constructor-arg ref="desk1"/>
+    </bean>
+
+    <bean id="lap1" class="com.sumeet.Laptop">
+
+    </bean>
+
+    <bean id="desk1" class="com.sumeet.Desktop">
+
     </bean>
 
 
