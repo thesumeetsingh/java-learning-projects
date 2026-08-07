@@ -29,7 +29,7 @@ public class StudentController {
         return studentList;
     }
 
-    @PostMapping("/create/student")
+    @PostMapping("/students")
     public Student addStudent(@RequestBody Student student){
         studentList.add(student);
         return student;
