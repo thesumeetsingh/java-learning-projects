@@ -1,4 +1,4 @@
-package com.sumeet.SpringSecurity;
+package com.sumeet.SpringSecurity.model;
 
 
 
