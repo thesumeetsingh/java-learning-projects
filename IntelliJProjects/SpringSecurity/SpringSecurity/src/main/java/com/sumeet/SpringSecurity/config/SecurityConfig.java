@@ -31,6 +31,7 @@ public class SecurityConfig {
 
     @Autowired
     private JWTFilter jwtFilter;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity){
 

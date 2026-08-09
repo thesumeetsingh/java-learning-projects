@@ -6,6 +6,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.hibernate.annotations.Filter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -14,10 +15,13 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+@Component
 public class JWTFilter extends OncePerRequestFilter {
     @Autowired
     private JWTService jwtService;
@@ -31,7 +35,7 @@ public class JWTFilter extends OncePerRequestFilter {
         String token=null;
         String name=null;
 
-        if(authHeader!=null & authHeader.startsWith("Bearer ")){
+        if(authHeader!=null && authHeader.startsWith("Bearer ")){
             token=authHeader.substring(7);
             name= jwtService.extractName(token);
 
