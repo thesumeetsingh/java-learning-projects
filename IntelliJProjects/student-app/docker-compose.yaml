@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8090:8090"
+    networks:
+      - student-network
+
+  mysqldb:
+      image: mysql:latest
+      environment:
+        MYSQL_ROOT_PASSWORD: rootpassword
+        MYSQL_DATABASE: studentdb
+        MYSQL_USER: sumeet
+        MYSQL_PASSWORD: 1234
+      ports:
+        - 3307:3306
+      networks:
+        - student-network
+
+networks:
+  student-network:
+    driver: bridge
